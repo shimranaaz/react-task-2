@@ -1,0 +1,103 @@
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #673ab7);
+  position: relative;
+  color: white;
+  padding: 0 2rem;
+}
+
+.welcome-message {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out, bounce 1.5s infinite;
+}
+.right-side {
+  text-align: right;
+}
+
+.name {
+  font-size: 2rem;
+  font-style: italic;
+  color: #ffcc00;
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.App {
+  background: url('https://e0.pxfuel.com/wallpapers/190/150/desktop-wallpaper-evening-clean-sky-mountains-peak-nature.jpg') no-repeat center center/cover;
+  filter: brightness(0.5);
+}
+@media only screen and (max-width:414px){
+  .welcome-message {
+    font-size: 25px;
+  }
+  .name{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width:540px){
+  .welcome-message {
+    font-size: 25px;
+  }
+  .name{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width:375px){
+  .welcome-message {
+    font-size: 25px;
+  }
+  .name{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width:365px){
+  .welcome-message {
+    font-size: 25px;
+  }
+  .name{
+    font-size: 20px;
+  }
+}
+
