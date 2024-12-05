@@ -1,0 +1,143 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .profile-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: cardSlideIn 1.5s ease-out;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    z-index: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.5s ease;
+  }
+  
+  .profile-card:hover::before {
+    opacity: 1;
+  }
+  
+  .profile-header {
+    margin-bottom: 20px;
+  }
+  
+  .profile-title {
+    font-size: 1.8rem;
+    color: #66a6ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: textFadeIn 2s ease-in;
+  }
+  
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .profile-item {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center; 
+  }
+  
+  .profile-item strong {
+    color: #66a6ff;
+  }
+  
+  .profile-item ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+  }
+  
+  .profile-hobby {
+    margin: 10px 0;
+    padding: 10px 15px; 
+    border-radius: 10px;
+    background: rgba(102, 166, 255, 0.1);
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .profile-hobby:hover {
+    background: #66a6ff;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cardSlideIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textFadeIn {
+    from {
+      letter-spacing: 10px;
+      opacity: 0;
+    }
+    to {
+      letter-spacing: 2px;
+      opacity: 1;
+    }
+  }
+  
